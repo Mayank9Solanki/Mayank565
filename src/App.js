@@ -4,13 +4,13 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      users: null,
+      users: [],
     };
   }
   componentDidMount() {
     fetch("https://reqres.in/api/users").then((resp) => {
       resp.json().then((result) => {
-        // console.warn(result.data);
+        console.warn(result.data);
         this.setState({users:result.data})
       })
     })
@@ -22,13 +22,13 @@ class App extends React.Component {
           Fecth API Data
         </h1>
         {
-          this.State.users ?
-          this.State.users.map((item,i)=>
+          this.state.users ?
+          this.state.users.map((item,i)=>
             <div>
               <p>{i}--- {item.first_name}
-              </p>
+              {item.last_name}</p>
             </div>
-             )
+  )
           :
           null
         }
