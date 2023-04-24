@@ -11,27 +11,29 @@ class App extends React.Component {
     fetch("https://reqres.in/api/users").then((resp) => {
       resp.json().then((result) => {
         console.warn(result.data);
-        this.setState({users:result.data})
-      })
-    })
+        this.setState({ users: result.data });
+      });
+    });
   }
   render() {
     return (
       <div className="App">
-        <h1>
-          Fecth API Data
-        </h1>
-        {
-          this.state.users ?
-          this.state.users.map((item,i)=>
-            <div>
-              <p>{i}--- {item.first_name}
-              {item.last_name}</p>
-            </div>
-  )
-          :
-          null
-        }
+        <h1>Fecth API Data</h1>
+        {this.state.users
+          ? this.state.users.map((item, i) => (
+              <div>
+                <form>
+                  <p>
+                    No:{i}
+                    Name:{item.first_name}<br/>
+                    Surname:{item.last_name}<br/>
+                    Email:{item.email}<br/>
+                    Image:{item.avatar}<br/>
+                  </p>
+                </form>
+              </div>
+            ))
+          : null}
       </div>
     );
   }
