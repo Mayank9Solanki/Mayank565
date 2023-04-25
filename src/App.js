@@ -1,9 +1,15 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import Iphone from './Iphone'
+
 
 const App = () => {
   return (
     <>
-    <h1>jmj</h1>
+    <BrowserRouter>
+     <Iphone/>
+    </BrowserRouter>
+    
     
     </>
   )
