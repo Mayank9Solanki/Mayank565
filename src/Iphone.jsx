@@ -7,18 +7,25 @@ const Iphone = () => {
     <>
       {products.map((x) => {
         return (
-          <div className="container" align="center">
+          <div className="container">
             <div className="row">
-              <div className="col-md-4 mt-5">
+              <div className="col-md-4">
                 <div className="card" style={{ width: "18rem" }}>
-                  <div className="card-body" style={{ borderRadius: "5px" }}>
-                    <img src={x.thumbnail} className="card-img-top" style={{width:"280px",height:"auto"}} />
+                  <div className="card-body">
+                    <img
+                      src={x.thumbnail}
+                      className="card-img-top"
+                      style={{ width: "250px", height: "auto" }}
+                    />
                     <p>ID:{x.id}</p>
-                    <br /><br/><hr/>
+                    <br />
+                    <hr />
                     <p>title:{x.title}</p>
-                    <br /><hr/>
+                    <br />
+                    <hr />
                     <p>DESCRIPITION:{x.description}</p>
-                    <br /><hr/>
+                    <br />
+                    <hr />
                     <p>PRICE:{x.price}</p>
                     <br />
                     <hr />
@@ -28,9 +35,13 @@ const Iphone = () => {
                     <br />
                     <hr />
                     <p style={{ color: "blue" }}>stock:{x.stock}</p>
-                    <br /><hr/>
-                    <p style={{ color: "gold" }}>brand:{x.brand}</p>
-                    <br /><hr/>
+                    <br />
+                    <hr />
+                    <p style={{ color: "black" }}>
+                      <b>brand:{x.brand}</b>
+                    </p>
+                    <br />
+                    <hr />
                     <p style={{ color: "black" }}>category:{x.category}</p>
                     <br />
                     <hr />
