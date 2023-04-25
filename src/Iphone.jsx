@@ -9,7 +9,7 @@ const Iphone = () => {
         return (
           <div className="container">
             <div className="row">
-              <div className="col-md-4">
+              <div className="col">
                 <div className="card" style={{ width: "18rem" }}>
                   <div className="card-body">
                     <img
